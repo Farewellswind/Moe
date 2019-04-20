@@ -1,0 +1,257 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: rgb(230, 240, 241);
+}
+
+header {
+	width: 100%;
+	height: 65px;
+	display: block;
+	background-color: rgb(230, 240, 250);
+	box-shadow: 2px 2px 2px pink;
+	z-index: 9999;
+	position: relative;
+}
+
+#right {
+	float: left;
+}
+
+#right>a>img {
+	height: 65px;
+	z-index: 999;
+}
+
+#left {
+	display: flex;
+	float: right;
+	margin-right: 30px;
+	/*background-color:#111111 ;*/
+}
+
+.tag {
+	list-style: none;
+	margin: 0;
+	padding: 15px 15px;
+	font-family: "微软雅黑";
+	font-size: 20px;
+	border-radius: 10px;
+	-webkit-transition: margin 0.2s ease-out;
+}
+
+.tag:hover {
+	padding-top: 20px;
+	background-color: rgb(230, 230, 250);
+	box-shadow: 0 12px 0 rgb(230, 230, 250);
+}
+
+a {
+	position: relative;
+	text-decoration: none;
+	font-size: 20px;
+	color: #333;
+}
+
+header a:before {
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: -2px;
+	height: 2px;
+	width: 100%;
+	background: #4285f4;
+	transform: scale(0);
+	transition: all 0.3s;
+}
+
+header a:hover:before {
+	transform: scale(1);
+}
+
+@keyframes move_wave {
+	0% {
+		transform: translateX(0) translateZ(0) scaleY(1)
+	}
+	50% {
+		transform: translateX(-25%) translateZ(0) scaleY(0.55)
+	}
+	100% {
+		transform: translateX(-50%) translateZ(0) scaleY(1)
+	}
+}
+
+.wave {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+}
+
+.wave-box {
+	position: absolute;
+	width: 100%;
+	overflow: hidden;
+	height: 100%;
+	bottom: -1px;
+	/*background-color: rgb(230, 240, 241);*/
+	z-index: 3;
+	/*background-image: linear-gradient(to top, #86377b 20%, #27273c 80%);*/
+}
+
+.wave1 {
+	z-index: 15;
+	opacity: 0.5;
+}
+
+.wave2 {
+	z-index: 10;
+	opacity: 0.75;
+}
+
+.wave3 {
+	z-index: 5;
+}
+
+.wave {
+	position: absolute;
+	left: 0;
+	width: 200%;
+	height: 100%;
+	background-repeat: repeat no-repeat;
+	background-position: 0 bottom;
+	transform-origin: center bottom;
+}
+
+.wave-1 {
+	background-size: 50% 100px;
+}
+
+.wave-anime .wave-1 {
+	animation: move-wave 3s;
+	-webkit-animation: move-wave 3s;
+	-webkit-animation-delay: 1s;
+	animation-delay: 1s;
+}
+
+.wave-2 {
+	background-size: 50% 120px;
+}
+
+.wave-anime .wave-2 {
+	animation: move_wave 10s linear infinite;
+}
+
+.wave-3 {
+	background-size: 50% 100px;
+}
+
+.wave-anime .wave-3 {
+	animation: move_wave 15s linear infinite;
+}
+
+.container {
+	width: 100%;
+	margin: 30px auto;
+}
+
+.left {
+	margin: 70px 20px;
+	height: 400px;
+	width: 300px;
+	float: left;
+	display: inline-block;
+	/*position: inherit;*/
+}
+
+.text {
+	display: flex;
+}
+
+.text>span {
+	font-size: 40px;
+	width: 45px;
+	word-wrap: break-word;
+}
+
+.text>#ch {
+	margin-left: 150px;
+}
+
+.text>#en {
+	width: 35px;
+	font-size: 30px;
+	margin-top: 40px;
+	margin-left: 20px;
+}
+
+#round {
+	display: flex;
+	margin-top: -50px;
+	margin-left: 50px;
+}
+
+#round>.round1 {
+	width: 150px;
+	height: 150px;
+	border-radius: 75px;
+	background-color: rgb(237, 163, 136);
+	opacity: 0.8;
+	position: absolute;
+}
+
+#round>.round2 {
+	margin: 75px;
+	width: 120px;
+	height: 120px;
+	border-radius: 60px;
+	background-color: rgb(236, 201, 171);
+	position: absolute;
+	opacity: 0.8;
+}
+
+.middle {
+	width: 300px;
+	float: left;
+	margin: 80px 70px;
+}
+
+.right {
+	width: 300px;
+	float: left;
+	margin: 80px 70px;
+}
+
+.info>span {
+	font-size: 18px;
+	line-height: 36px;
+}
+
+#weixin,
+#qq {
+	width: 100px;
+	height: 100px;
+	margin: 30px;
+	margin-right: 0;
+}
+
+#map {
+	text-align: center;
+	width: 500px;
+}
+
+.map {
+	width: 500px;
+	margin: 15px 2px;
+}
+
+#mapname {
+	margin: 10px;
+	text-align: center;
+}
